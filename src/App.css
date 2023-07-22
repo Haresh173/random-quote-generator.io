@@ -1,0 +1,96 @@
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.quote {
+  height: 100vh;
+  background-image: url("images/backg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(
+    255,
+    255,
+    188,
+    0.9
+  ); /* Adjust the alpha (0.5) for the desired opacity */
+  background-blend-mode: multiply;
+}
+
+.card {
+  background-color: rgb(230, 220, 207);
+  width: 60%; /* Adjust the width as needed */
+  height: 40vh; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 3px;
+  box-shadow: 10px 10px;
+}
+
+.card:hover {
+  color: rgba(175, 18, 3, 0.8);
+  animation: neon-text 1s ease-in-out infinite alternate;
+}
+
+.head{
+  display: flex;
+  align-items: center;
+
+  font-family: 'Tektur', cursive;
+  height: 70%;
+  padding: 20px;
+} 
+
+.btn {
+  appearance: none;
+  padding: 15px 35px;
+  /* Add margin between the quote and the button */
+  margin-top: 20px;
+  border: 0;
+  padding: 25px 45px;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  background: linear-gradient(
+    270deg,
+    #5f2c82,
+    #ee38bf,
+    #ff5858,
+    #49a09d,
+    #1b5ece,
+    #5f2c82,
+    #ee38bf,
+    #ff5858
+  );
+  background-size: 400% 400%;
+  animation: AnimationName 30s ease infinite;
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .card {
+    width: 80%;
+    height: 30%;
+}
+}
